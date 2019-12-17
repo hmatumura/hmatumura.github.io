@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+   
+    <style>
+       
+        img{
+            width:1000px;
+       
+        }
+        #pro1{
+            font-size:40px;
+            background: #FFF0F5;
+            color:#FF6347;
+            margin:20px;
+            padding:20px;
+        }
+        #pro2{
+            font-size:15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+   <center>
+        <h1 id="pro1">夏合宿</h1>
+        <h2 id="pro2">サークルの夏合宿に行きました！！！！
+            クリックすると、学年の写真になります!!!</h2>
+ 
+        <img id="gazo" onclick="changeIMG()" src="natuga.JPG"
+              width="500" height="700" border="0" alt="">
+    </center>
+
+<script>
+
+    var img = new Array();
+
+       img[0] = new Image();
+       img[0].src = "natuga.JPG";
+       img[1] = new Image();
+       img[1].src = "natuga2.JPG";
+
+         var cnt=0;
+
+         function changeIMG(){
+ 
+         if (cnt == 1)
+           { cnt=0; }
+               else
+           { cnt++; }
+ 
+ 
+           document.getElementById("gazo").src=img[cnt].src;
+                    }
+
+</script>
+   
+   
+   
+</body>
+</html>
